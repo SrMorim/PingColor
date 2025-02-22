@@ -5,14 +5,14 @@ Este repositório fornece uma estrutura base para projetos Java seguindo o padr�
 ## 📂 Estrutura de Diretórios
 
 ```
-/meu-projeto
+/nome-projeto
 │── /src
 │   ├── /main
 │   │   ├── /java
-│   │   │   ├── /com/meuprojeto
+│   │   │   ├── /com/nomeprojeto
 │   │   │   │   ├── /controller
 │   │   │   │   │   ├── MainController.java
-│   │   │   │   │   ├── UsuarioController.java
+│   │   │   │   │   ├── UserController.java
 │   │   │   │   ├── /model
 │   │   │   │   │   ├── Usuario.java
 │   │   │   │   │   ├── DAOUsuario.java
@@ -31,11 +31,11 @@ Este repositório fornece uma estrutura base para projetos Java seguindo o padr�
 │   │   │   ├── database.properties
 │   ├── /test
 │   │   ├── /java
-│   │   │   ├── /com/meuprojeto
+│   │   │   ├── /com/nomeprojeto
 │   │   │   │   ├── /controller
-│   │   │   │   │   ├── UsuarioControllerTest.java
+│   │   │   │   │   ├── UserControllerTest.java
 │   │   │   │   ├── /model
-│   │   │   │   │   ├── UsuarioTest.java
+│   │   │   │   │   ├── UserTest.java
 │── /lib
 │── /logs
 │── pom.xml (caso seja um projeto Maven)
