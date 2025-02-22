@@ -14,8 +14,8 @@ Este repositório fornece uma estrutura base para projetos Java seguindo o padr�
 │   │   │   │   │   ├── MainController.java
 │   │   │   │   │   ├── UserController.java
 │   │   │   │   ├── /model
-│   │   │   │   │   ├── Usuario.java
-│   │   │   │   │   ├── DAOUsuario.java
+│   │   │   │   │   ├── User.java
+│   │   │   │   │   ├── DAOUser.java
 │   │   │   │   ├── /view
 │   │   │   │   │   ├── MainView.java
 │   │   │   │   │   ├── LoginView.java
