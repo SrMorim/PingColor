@@ -33,7 +33,7 @@ POO-CEUB/
 ## 🚀 Como Utilizar
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/POO-CEUB.git
+   git clone https://github.com/SrMorim/POO-CEUB.git
    ```
 2. Importe o projeto na sua IDE favorita.
 3. Compile e execute os arquivos conforme necessário.
