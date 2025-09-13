@@ -1,0 +1,36 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dropperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgGradient)" stroke="#4a5568" stroke-width="3"/>
+  
+  <!-- Dropper tool -->
+  <g transform="translate(64,64)">
+    <!-- Dropper body -->
+    <rect x="-6" y="-25" width="12" height="35" fill="url(#dropperGradient)" stroke="#4a5568" stroke-width="1.5" rx="2"/>
+    
+    <!-- Dropper tip -->
+    <polygon points="-3,-25 3,-25 0,-35" fill="url(#dropperGradient)" stroke="#4a5568" stroke-width="1.5"/>
+    
+    <!-- Color sample -->
+    <circle cx="0" cy="5" r="8" fill="#ff6b6b" stroke="#4a5568" stroke-width="2"/>
+    
+    <!-- Dropper bulb -->
+    <ellipse cx="0" cy="15" rx="8" ry="12" fill="url(#dropperGradient)" stroke="#4a5568" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Color palette dots -->
+  <circle cx="25" cy="25" r="4" fill="#ff6b6b"/>
+  <circle cx="103" cy="25" r="4" fill="#4ecdc4"/>
+  <circle cx="25" cy="103" r="4" fill="#45b7d1"/>
+  <circle cx="103" cy="103" r="4" fill="#f9ca24"/>
+</svg>

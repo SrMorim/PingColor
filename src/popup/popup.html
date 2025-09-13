@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PingColor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎨 PingColor</h1>
+      <p>Capture cores do navegador</p>
+    </div>
+    
+    <div class="controls">
+      <button id="togglePicker" class="btn-primary">
+        <span id="pickerStatus">Ativar Captura</span>
+      </button>
+    </div>
+    
+    <div class="current-color" id="currentColor" style="display: none;">
+      <div class="color-display">
+        <div class="color-preview" id="colorPreview"></div>
+        <div class="color-info">
+          <div class="hex-code" id="hexCode">#000000</div>
+          <button id="copyColor" class="btn-copy">Copiar</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="history">
+      <h3>Histórico</h3>
+      <div id="colorHistory" class="color-list">
+        <div class="empty-state">
+          <p>Nenhuma cor capturada ainda</p>
+        </div>
+      </div>
+      <button id="clearHistory" class="btn-secondary" style="display: none;">
+        Limpar Histórico
+      </button>
+    </div>
+    
+    <div class="footer">
+      <p>Clique em qualquer elemento da página para capturar sua cor</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

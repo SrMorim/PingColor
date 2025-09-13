@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar Ícones PNG - PingColor</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .icon-generator { margin: 20px 0; }
+        canvas { border: 1px solid #ccc; margin: 10px; }
+        button { padding: 10px 20px; margin: 5px; background: #4CAF50; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🎨 Gerador de Ícones PingColor</h1>
+    <p>Esta página gera ícones PNG temporários para testar a extensão.</p>
+    
+    <div class="icon-generator">
+        <button onclick="generateIcons()">Gerar Ícones PNG</button>
+        <button onclick="downloadAll()">Baixar Todos</button>
+    </div>
+    
+    <div id="canvas-container"></div>
+    
+    <script>
+        function createIcon(size) {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            // Draw background circle
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2 - 2, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Draw border
+            ctx.strokeStyle = '#4a5568';
+            ctx.lineWidth = Math.max(1, size/32);
+            ctx.stroke();
+            
+            // Draw dropper (simplified)
+            ctx.fillStyle = 'white';
+            const centerX = size/2;
+            const centerY = size/2;
+            const dropperWidth = size/8;
+            const dropperHeight = size/3;
+            
+            // Dropper body
+            ctx.fillRect(centerX - dropperWidth/2, centerY - dropperHeight/2, dropperWidth, dropperHeight);
+            
+            // Color sample
+            ctx.fillStyle = '#ff6b6b';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY + dropperHeight/6, size/16, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            return canvas;
+        }
+        
+        function generateIcons() {
+            const container = document.getElementById('canvas-container');
+            container.innerHTML = '';
+            
+            const sizes = [16, 32, 48, 128];
+            
+            sizes.forEach(size => {
+                const canvas = createIcon(size);
+                canvas.id = `icon${size}`;
+                
+                const div = document.createElement('div');
+                div.innerHTML = `<h3>icon${size}.png (${size}x${size})</h3>`;
+                div.appendChild(canvas);
+                
+                const downloadBtn = document.createElement('button');
+                downloadBtn.textContent = `Download ${size}x${size}`;
+                downloadBtn.onclick = () => downloadIcon(canvas, `icon${size}.png`);
+                div.appendChild(downloadBtn);
+                
+                container.appendChild(div);
+            });
+        }
+        
+        function downloadIcon(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        function downloadAll() {
+            const sizes = [16, 32, 48, 128];
+            sizes.forEach(size => {
+                const canvas = document.getElementById(`icon${size}`);
+                if (canvas) {
+                    setTimeout(() => downloadIcon(canvas, `icon${size}.png`), size * 10);
+                }
+            });
+        }
+        
+        // Generate icons on load
+        window.onload = generateIcons;
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PingColor - Extensão Chrome para Captura de Cores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../src/assets/icon.svg" type="image/svg+xml">
+    <meta name="description" content="Extensão Chrome que funciona como conta-gotas digital para capturar códigos hexadecimais de qualquer cor no navegador.">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="logo">
+                    <svg width="80" height="80" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="dropperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="64" cy="64" r="60" fill="url(#bgGradient)" stroke="#4a5568" stroke-width="3"/>
+                        <g transform="translate(64,64)">
+                            <rect x="-6" y="-25" width="12" height="35" fill="url(#dropperGradient)" stroke="#4a5568" stroke-width="1.5" rx="2"/>
+                            <polygon points="-3,-25 3,-25 0,-35" fill="url(#dropperGradient)" stroke="#4a5568" stroke-width="1.5"/>
+                            <circle cx="0" cy="5" r="8" fill="#ff6b6b" stroke="#4a5568" stroke-width="2"/>
+                            <ellipse cx="0" cy="15" rx="8" ry="12" fill="url(#dropperGradient)" stroke="#4a5568" stroke-width="1.5"/>
+                        </g>
+                        <circle cx="25" cy="25" r="4" fill="#ff6b6b"/>
+                        <circle cx="103" cy="25" r="4" fill="#4ecdc4"/>
+                        <circle cx="25" cy="103" r="4" fill="#45b7d1"/>
+                        <circle cx="103" cy="103" r="4" fill="#f9ca24"/>
+                    </svg>
+                </div>
+                <h1>🎨 PingColor</h1>
+                <p class="tagline">Extensão Chrome para captura de cores</p>
+                <p class="description">Uma ferramenta conta-gotas digital que captura códigos hexadecimais de qualquer cor no navegador de forma simples e intuitiva.</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn btn-primary">📥 Download</a>
+                    <a href="#features" class="btn btn-secondary">🔍 Ver Recursos</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="features">
+            <div class="container">
+                <h2>✨ Recursos</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Captura Precisa</h3>
+                        <p>Clique em qualquer elemento da página para capturar sua cor exata em formato hexadecimal.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Cópia Automática</h3>
+                        <p>Código hexadecimal é copiado automaticamente para a área de transferência após a captura.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Histórico</h3>
+                        <p>Mantém um histórico das últimas 10 cores capturadas para fácil acesso posterior.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Interface Intuitiva</h3>
+                        <p>Design limpo e moderno com tooltips informativos durante a captura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo">
+            <div class="container">
+                <h2>🚀 Como Usar</h2>
+                <div class="demo-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Instalar Extensão</h3>
+                            <p>Baixe e instale a extensão no Chrome através do modo desenvolvedor.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Ativar Captura</h3>
+                            <p>Clique no ícone da extensão e pressione "Ativar Captura".</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Capturar Cor</h3>
+                            <p>Clique em qualquer elemento da página para capturar sua cor.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Usar Código</h3>
+                            <p>O código hexadecimal é copiado automaticamente para uso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="installation" class="installation">
+            <div class="container">
+                <h2>📦 Instalação</h2>
+                <div class="installation-methods">
+                    <div class="method">
+                        <h3>Modo Desenvolvedor (Recomendado)</h3>
+                        <ol>
+                            <li>Baixe o arquivo ZIP da extensão</li>
+                            <li>Extraia o conteúdo em uma pasta</li>
+                            <li>Acesse <code>chrome://extensions/</code></li>
+                            <li>Ative o "Modo desenvolvedor"</li>
+                            <li>Clique em "Carregar sem compactação"</li>
+                            <li>Selecione a pasta extraída</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="permissions">
+            <div class="container">
+                <h2>🔐 Permissões</h2>
+                <div class="permissions-list">
+                    <div class="permission">
+                        <div class="permission-icon">💾</div>
+                        <div class="permission-content">
+                            <h3>Storage</h3>
+                            <p>Para salvar histórico de cores capturadas localmente.</p>
+                        </div>
+                    </div>
+                    <div class="permission">
+                        <div class="permission-icon">🌐</div>
+                        <div class="permission-content">
+                            <h3>ActiveTab</h3>
+                            <p>Para acessar cores da página ativa quando solicitado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download">
+            <div class="container">
+                <h2>📥 Download</h2>
+                <div class="download-options">
+                    <div class="download-card">
+                        <h3>🔧 Versão de Desenvolvimento</h3>
+                        <p>Código fonte completo para instalação manual</p>
+                        <a href="https://github.com/[seu-usuario]/PingColor/archive/main.zip" class="btn btn-primary">Download ZIP</a>
+                    </div>
+                    <div class="download-card">
+                        <h3>📂 Repositório GitHub</h3>
+                        <p>Acesse o código fonte e contribua para o projeto</p>
+                        <a href="https://github.com/[seu-usuario]/PingColor" class="btn btn-secondary">Ver no GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-specs">
+            <div class="container">
+                <h2>⚙️ Especificações Técnicas</h2>
+                <div class="specs-grid">
+                    <div class="spec">
+                        <strong>Versão:</strong> 1.0.0
+                    </div>
+                    <div class="spec">
+                        <strong>Manifest:</strong> V3
+                    </div>
+                    <div class="spec">
+                        <strong>Compatibilidade:</strong> Chrome 114+
+                    </div>
+                    <div class="spec">
+                        <strong>Tamanho:</strong> ~15KB
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>🎨 PingColor - Projeto Bootcamp II</p>
+                    <p>Desenvolvido para o desafio de extensão Chrome com Manifest V3</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/[seu-usuario]/PingColor">GitHub</a>
+                    <a href="https://github.com/[seu-usuario]/PingColor/issues">Reportar Bug</a>
+                    <a href="https://developer.chrome.com/docs/extensions/mv3/">Chrome Extensions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
